@@ -1,0 +1,14 @@
+﻿@model Person
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Kişi Güncelle</h2>
+
+<form asp-action="Update" method="post">
+    <input type="hidden" asp-for="@Model.Id"/>
+    <input class="form-control mb-2" asp-for="@Model.FullName"/>
+    <button class="btn btn-info" type="submit">Kişi Güncelle</button>
+</form>
